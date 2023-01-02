@@ -1,5 +1,8 @@
 function initFE() {
+    mainSliderInit()
     menuSliderInit()
+    productSliderInit()
+    reviewsSliderInit()
     fixElement(300, false, 'headermain', 'fixed')
     fixElement(300, false, 'headercontainer', 'fixed')
     closeByClickOutside('.mainmenu', '.mainmenubtn')
@@ -28,6 +31,15 @@ function initFE() {
 
 
 $(document).ready(function() {
+    $(document).on('click', '[data-toggle="fulltext"]', function(e) {
+        let text = $(this).text()
+        e.preventDefault()
+        $(this).siblings('[data-limit]').toggleClass('texthidden')
+        $(this).text(
+            text = "Читать полностью" ? "Скрыть" : "Читать полностью"
+        )
+    })
+    
    
 
     flatpickr("#js-flatpickr", {
@@ -106,7 +118,7 @@ $(document).ready(function() {
           $(this).find('.cardrating__value').text() * ($(this).find('.fa-star').width() + 2.1)
       );
   });
-  $('.reviews__rating .cardrating').each(function() {
+  $('.reviewcontent').each(function() {
       $(this).find('span.stars-active').css(
           'width',
           $(this).find('.cardrating__value').text() * 18);
@@ -173,7 +185,12 @@ $(document).ready(function() {
           $(this)
               .addClass('active').siblings().removeClass('active')
               .closest('[data-tabs]').find('[data-contenttabs]').removeClass('active').eq($(this).index()).addClass('active');
-      });
+            let sl =  $(this).closest('[data-tabs]').find('.slick-slider')
+            if (sl.length) {
+                sl.slick('refresh')
+            }
+             
+            });
 
   });
 })(jQuery);
@@ -219,71 +236,10 @@ function menuSliderInit() {
 		$('.productslider__slider-menu.slick-slider').css('opacity', '1');
 	}
 
-	function hideSlider() {
+	/* function hideSlider() {
 		$('.productslider__slider-menu.slick-slider').css('opacity', '0');
-	}
-	/* if ($(window).width() > 1023) {
-		$(".mainmenu__links ul li").on({
-			'mouseenter': function() {
-				$(this).find('.productslider__slider-menu').slick('refresh');
-
-				setTimeout(showSlider, '300');
-
-
-				$(this).addClass('active');
-				if ($(this).find('.mainmenu__wrapper').length) {
-					$(this).find('.mainmenu__wrapper').addClass('active');
-					if ($('.mainmenu__wrapper').hasClass('active')) {
-						$('.mainmenu__content').css('width', '100%');
-
-					}
-				}
-			},
-			'mouseleave': function() {
-				$(this).removeClass('active');
-				$(this).find('.mainmenu__wrapper').removeClass('active');
-				if ($('.mainmenu__wrapper').hasClass('active')) {
-					$('.mainmenu__content').css('width', '100%');
-				} else {
-					$('.mainmenu__content').css('width', 'initial');
-					hideSlider();
-				}
-			}
-		});
-	} else {
-		$(".mainmenu__links ul li").on({
-			'click': function() {
-				$(this).toggleClass('active');
-				$(this).find('.mainmenu__wrapper').slideToggle('active');
-			}
-		});
 	} */
 
-	let hamburger = document.querySelector('.menubtn');
-	let menu = document.querySelector('.mainmenu');
-
-	const toggleMenu = () => {
-		menu.classList.toggle('active');
-	}
-
-	hamburger.addEventListener('click', e => {
-		e.stopPropagation();
-
-		toggleMenu();
-		$('.mainmenu').find('.productslider__slider-menu').slick('refresh');
-
-	});
-
-	document.addEventListener('click', e => {
-		let target = e.target;
-		let its_menu = target == menu || menu.contains(target);
-		let its_hamburger = target == hamburger;
-		let menu_is_active = menu.classList.contains('active');
-
-		if (!its_menu && !its_hamburger && menu_is_active) {
-			toggleMenu();
-		}
-	})
 }
 
 
@@ -292,37 +248,42 @@ function menuSliderInit() {
 
 
   function mainSliderInit() {
-    const swiper = new Swiper(".mainswiperpreview", {
-        spaceBetween: 9,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-        },
-        slidesPerView: "auto",
-        mousewheel: true,
-        direction: 'vertical',
-        freeMode: true,
-        watchSlidesProgress: true,
-
+    $('.mainslider__slider').each(function() {
+        $(this).slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            fade: true,
+            nextArrow: $(this).closest('.mainslider').find('.slider__arrow_right'),
+            prevArrow: $(this).closest('.mainslider').find('.slider__arrow_left'),
+        });
     });
-    const swiper2 = new Swiper(".mainswiper", {
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-        pagination: {
-            el: ".mainslider-pagination",
-            clickable: true
-        },
-
+}
+  function reviewsSliderInit() {
+    $('[data-reviews="slider"]').each(function() {
+        $(this).slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            nextArrow: $(this).closest('[data-sliderblock="reviewsblock"]').find('.slider__arrow_right'),
+            prevArrow: $(this).closest('[data-sliderblock="reviewsblock"]').find('.slider__arrow_left'),
+        });
     });
+
+    $('.reviewcontent__text').each(function() {
+        const content = $(this).find('[data-limit]')
+        if (content.height() >= content.data('limit')) {
+            content.addClass('texthidden')
+            $(this).append('<span data-toggle="fulltext" class="link">Читать полностью</span>')
+        }
+    })
+
+
+
 }
 
 
@@ -374,13 +335,13 @@ function productSliderInit() {
             dots: false,
             arrows: true,
             infinite: true,
-            slidesToShow: 5,
+            slidesToShow: 6,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
+         /*    autoplay: true,
+            autoplaySpeed: 3000, */
             swipe: false,
-            nextArrow: $(this).closest('.productslider').find('.sliderarrows__right'),
-            prevArrow: $(this).closest('.productslider').find('.sliderarrows__left'),
+            nextArrow: $(this).closest('.productslider').find('.slider__arrow_right'),
+            prevArrow: $(this).closest('.productslider').find('.slider__arrow_left'),
             responsive: [{
                     breakpoint: 1530,
                     settings: {
