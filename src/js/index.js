@@ -9,6 +9,7 @@ function initFE() {
     limitText('.reviewcontent__text', 'Читать полностью')
     limitText('.text', 'Подробнее')
 
+    
 
    /*  cardImagesSlider()
     menuInit()
@@ -252,6 +253,7 @@ function menuSliderInit() {
             fade: true,
             nextArrow: $(this).closest('.mainslider').find('.slider__arrow_right'),
             prevArrow: $(this).closest('.mainslider').find('.slider__arrow_left'),
+         
         });
     });
 }
@@ -265,6 +267,23 @@ function menuSliderInit() {
             dots: false,
             nextArrow: $(this).closest('[data-sliderblock="reviewsblock"]').find('.slider__arrow_right'),
             prevArrow: $(this).closest('[data-sliderblock="reviewsblock"]').find('.slider__arrow_left'),
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+
+        ]
         });
     });
 
@@ -365,7 +384,6 @@ function productSliderInit() {
             slidesToScroll: 1,
          /*    autoplay: true,
             autoplaySpeed: 3000, */
-            swipe: false,
             nextArrow: $(this).closest('.productslider').find('.slider__arrow_right'),
             prevArrow: $(this).closest('.productslider').find('.slider__arrow_left'),
             responsive: [{
