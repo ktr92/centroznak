@@ -6,6 +6,8 @@ function initFE() {
     fixElement(300, false, 'headermain', 'fixed')
     fixElement(300, false, 'headercontainer', 'fixed')
     closeByClickOutside('.mainmenu', '.mainmenubtn')
+    limitText('.reviewcontent__text', 'Читать полностью')
+    limitText('.text', 'Подробнее')
 
 
    /*  cardImagesSlider()
@@ -31,14 +33,6 @@ function initFE() {
 
 
 $(document).ready(function() {
-    $(document).on('click', '[data-toggle="fulltext"]', function(e) {
-        let text = $(this).text()
-        e.preventDefault()
-        $(this).siblings('[data-limit]').toggleClass('texthidden')
-        $(this).text(
-            text = "Читать полностью" ? "Скрыть" : "Читать полностью"
-        )
-    })
     
    
 
@@ -274,14 +268,46 @@ function menuSliderInit() {
         });
     });
 
-    $('.reviewcontent__text').each(function() {
+    
+
+}
+
+
+
+
+function limitText(el, caption) {
+    $(el).each(function() {
         const content = $(this).find('[data-limit]')
-        if (content.height() >= content.data('limit')) {
-            content.addClass('texthidden')
-            $(this).append('<span data-toggle="fulltext" class="link">Читать полностью</span>')
+        
+        if (content) {
+            const height = content.data('limit')
+            if (content.height() >= height) {
+                content.css('height', height)
+                content.addClass('texthidden')
+                $(this).append(`<span data-toggle="fulltext" class="link">${caption}</span>`)
+            }
         }
     })
 
+    $(el).on('click', '[data-toggle="fulltext"]', function(e) {
+        e.preventDefault()
+
+        let text = $(this).text()
+        let content = $(this).siblings('[data-limit]')
+ 
+        $(this).siblings('[data-limit]').toggleClass('texthidden')
+
+        if (content.height() == content.data('limit')) {
+            $(this).siblings('[data-limit]').css('height', 'initial')
+        } else {
+            $(this).siblings('[data-limit]').css('height', content.data('limit'))
+        }
+        
+        $(this).text(
+            text == caption ? "Скрыть" : caption
+        )
+    })
+    
 
 
 }
