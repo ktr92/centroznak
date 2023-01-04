@@ -8,6 +8,7 @@ function initFE() {
     closeByClickOutside('.mainmenu', '.mainmenubtn')
     limitText('.reviewcontent__text', 'Читать полностью')
     limitText('.text', 'Подробнее')
+    detailsliderInit()
 
     
 
