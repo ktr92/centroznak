@@ -2843,6 +2843,15 @@ li.mainmenuLevelOne__item {
   margin-top: 44px;
   width: 20%;
 }
+.cataloglist__items_col4 {
+  .cataloglist__item {
+    width: 25%;
+    padding: 0 11px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+}
+
 button.productcard__addtocart {
   border-radius: 12px;
   padding-left: 0;
@@ -7086,6 +7095,66 @@ color: #343C4B;
   margin-bottom: 18px;
 }
 
+.catalogcard {
+  background: #FFFFFF;
+box-shadow: 5px 5px 60px rgba(36, 40, 43, 0.1);
+border-radius: 12px;
+padding: 6px;
+}
+.catalogcard__wrapper {
+}
+.catalogcard__image {
+ 
+}
+.catalogcard__img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  @include imagecenter(115%, height);
+
+  img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+}
+.catalogcard__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 27px;
+}
+.catalogcard__wrapper {
+  display: block;
+}
+.catalogcard__title {
+  font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+margin-right: 14px;
+
+color: #2D3646;
+}
+.catalogcard__link {
+  border: 1px solid rgba(45, 54, 70, 0.15); 
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+cursor: pointer;
+  &:hover, &:focus {
+    border: 2px solid #25B757;
+
+  }
+}
+
+
+
 @media (max-width: 1640px) {
   .slider__arrow_left {
     left: -55px;
@@ -7164,6 +7233,9 @@ color: #343C4B;
   }
 }
 @include large-screen {
+  .cataloglist__items_col4 .cataloglist__item {
+    width: 33.3333%;
+  }
   .headermain__descr span {
     display: none;
   }
@@ -9736,6 +9808,22 @@ line-height: 12px;
 .pagination ul li {
   margin: 0 3px;
 }
+.cataloglist__items_col4 .cataloglist__item {
+  width: 50%;
+}
+.catalogcard__title {
+  font-size: 12px;
+line-height: 100%;
+}
+.catalogcard__link {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+}
+.cataloglist__items_col4 .cataloglist__item {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
 }
 @include small-screen {
   .indexcat__items_full .indexcat__item {
@@ -9789,5 +9877,12 @@ line-height: 12px;
         line-height: 100%;
       }
     }
+  }
+
+  .cataloglist__items_col4 .cataloglist__item {
+    width: 100%;
+  }
+  .catalogcard__content {
+    padding-left: 18px;
   }
 }
