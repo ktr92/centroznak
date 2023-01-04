@@ -107,7 +107,8 @@ color: #3B435A;
 
 
 /*Dropdown select*/
-.dropdown-select{cursor: pointer;position: relative;}
+.dropdown-select{cursor: pointer;position: relative;
+width: 220px;}
 .dropdown-select__title{font-family: 'Jost';
   font-style: normal;
   font-weight: 600;
@@ -115,15 +116,19 @@ color: #3B435A;
   line-height: 19px;
   color: #25344F;
   /* identical to box height */
+  background-color: #F3F3F6;
+  padding: 8px 14px 8px 20px;
+border-radius: 6px;
   @include dropdown('../img/dropdown_big.svg');
   padding-right: 18px;
-
+/* 
   display: flex;
-  align-items: center;
+  align-items: center; */
 
   img {
     margin-right: 3px;
   }
+  width: 220px;
 }
 .dropdown-select__title .svg{margin: 0px 0px 0px 4px;
  
