@@ -10,7 +10,7 @@ function initFE() {
     limitText('.text', 'Подробнее')
     detailsliderInit()
     fixElement(false, 750, 'mobpriceFixed', 'fixed')
-
+    moreNewsSliderInit()
 
    /*  cardImagesSlider()
     menuInit()
