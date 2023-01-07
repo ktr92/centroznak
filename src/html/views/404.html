@@ -29,36 +29,33 @@
       <!-- /.container -->
     </div>
     <!-- /.breadcrumbs -->
-    <div class="container">
       <div class="errorpage">
-        <div class="errorpage__code"> 404 </div>
+
+        <div class="errorpage__image"> 
+          <div class="errorpage__img"><img src="img/404.png" alt=""></div>
+        </div>
+        <div class="container">
+
         <div class="errorpage__main">
           <div class="errorpage__content">
-            <div class="errorpage__title">К сожалению мы не смогли <br> найти эту страницу </div>
-            <div class="errorpage__text">Но мы подобрали несколько полезных ссылок котрые возможно вам понадобятся</div>
+            <div class="errorpage__title">Мы не смогли найти вашу страницу</div>
+            <div class="errorpage__text">Но мы подобрали для вас несколько полезных ссылок</div>
             <div class="errorpage__links">
               <ul>
                 <li>
-                  <a href="">Рецепты</a>
+                  <a href="">Главная</a>
                 </li>
                 <li>
                   <a href="">Оплата и доставка</a>
                 </li>
                 <li>
-                  <a href="">Полезно знать</a>
-                </li>
-                <li>
-                  <a href="">Новости</a>
+                  <a href="">Контакты</a>
                 </li>
               </ul>
             </div>
-            <!-- /.errorpage__links -->
           </div>
-          <!-- /.errorpage__content -->
         </div>
-        <!-- /.errorpage__main -->
       </div>
-      <!-- /.errorpage -->
     </div>
   </div>
 </main><%= _.template(require('../includes/footer.html').default)(data) %>
