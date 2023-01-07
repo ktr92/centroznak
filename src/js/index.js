@@ -32,6 +32,20 @@ function initFE() {
 
 
 $(document).ready(function() {
+    $(".youtubepopup").click(function () {
+        var $this = $(this);
+        var $iframe = $('<iframe frameborder="0" allow="autoplay; encrypted-media" class="iframe" id="Overlayvideo" allowfullscreen="true">').attr("src", $this.data("link")).css({"width": 400, "height": 300});
+        var $title = '';
+        $("#video-view").html($title).append($iframe);
+        $("#video-popup").show();
+    });
+    $('#video-close').click(function () {
+        $("#video-view").html('')
+        $("#video-popup").hide()
+    })
+
+
+    
     if ($(window).width() < 1024) {
         $(".sliderarrows.onlyMobile .slider__arrow_left").click(function (e) {
             $(this).closest('[data-block="productslider"]').find(".slick-slider").slick("slickPrev");
