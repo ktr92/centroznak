@@ -21,6 +21,14 @@
   <link rel="preload" href="fonts/Circe-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Circe-Bold.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Circe-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Regular.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Light.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Bold.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Medium.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
   
 
  
@@ -420,13 +428,13 @@
                       <div class="productcard__buy">
                         <div class="productcard__prices">
                           <div class="productcard__topprice">
-                            <div class="productcard__oldprice">102 230 ₽</div>
+                            <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                             <div class="productcard__badge">12%</div>
                           </div>
                           <!-- /.productcard__oldprice -->
                           <div class="productcard__mainprice">
                             <div class="productcard__price">
-                              <div class="productcard__pricevalue">89 230 ₽</div>
+                              <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                             </div>
                             <!-- /.productcard__price -->
                           </div>
@@ -459,13 +467,13 @@
                       <div class="productcard__buy">
                         <div class="productcard__prices">
                           <div class="productcard__topprice">
-                            <div class="productcard__oldprice">102 230 ₽</div>
+                            <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                             <div class="productcard__badge">12%</div>
                           </div>
                           <!-- /.productcard__oldprice -->
                           <div class="productcard__mainprice">
                             <div class="productcard__price">
-                              <div class="productcard__pricevalue">89 230 ₽</div>
+                              <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                             </div>
                             <!-- /.productcard__price -->
                           </div>
@@ -498,13 +506,13 @@
                       <div class="productcard__buy">
                         <div class="productcard__prices">
                           <div class="productcard__topprice">
-                            <div class="productcard__oldprice">102 230 ₽</div>
+                            <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                             <div class="productcard__badge">12%</div>
                           </div>
                           <!-- /.productcard__oldprice -->
                           <div class="productcard__mainprice">
                             <div class="productcard__price">
-                              <div class="productcard__pricevalue">89 230 ₽</div>
+                              <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                             </div>
                             <!-- /.productcard__price -->
                           </div>
@@ -647,7 +655,7 @@
                   <div class='headertotal'>
                     <div class="headertotal__content">
                       <div class='headertotal__caption'>На сумму</div>
-                      <span class='headertotal__text'>89 230 ₽</span>
+                      <span class='headertotal__text'>89 230 <span class="rouble">₽</span></span>
                     </div>
                   </div>
                 </a>
@@ -709,7 +717,7 @@
                 <!-- /.productcard__oldprice -->
                 <div class="productcard__mainprice">
                   <div class="productcard__price">
-                    <div class="productcard__pricevalue">674.94₽/кг</div>
+                    <div class="productcard__pricevalue">674.94<span class="rouble">₽</span>/кг</div>
                   </div>
                   <!-- /.productcard__price -->
                 </div>
@@ -819,8 +827,15 @@
                       <a href="img/detail1.png" data-lightbox="detail"><img src="img/detail1.png" /></a>
                     </div>
                     <div class="swiper-slide">
-                      <span>
+                      <span class="onlyDesktop">
                         <iframe data-loader="youtube"  data-src="7X8II6J-6mU?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </span>
+                      <span class="onlyMobile">
+                        <a class="youtubepopup" href="#!" data-link="//www.youtube.com/embed/7X8II6J-6mU?enablejsapi=1" tabindex="0">
+                          <div class="youtubepopup__image">
+                              <div class="youtubepopup__img"><img src="//img.youtube.com/vi/7X8II6J-6mU/0.jpg" alt=""></div>
+                          </div> 
+                        </a>
                       </span>
                     </div>
                     <div class="swiper-slide">
@@ -892,7 +907,7 @@
                         </span>
                       </div>
                       <div class="detailinfo__count">
-                        <a href="">32 отзыва</a>
+                        <a href="#detailtabs">32 отзыва</a>
                       </div>
                     </div>
                   </div>
@@ -987,7 +1002,7 @@
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">5 800 ₽</div>
+                                  <div class="productcard__pricevalue">5 800 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -996,18 +1011,8 @@
                             </div>
                             <!-- /.productcard__prices -->
                             <div class="buyblock__buttons flex items-center">
-                              <div class="oneclick"><a href="#" class=" btn_border">Купить в 1 клик</a></div>
+                              <!-- <div class="oneclick"><a href="#" class=" btn_border">Купить в 1 клик</a></div> -->
                               <div class="productcard__cart">
-                                <!-- <button class="tocart btn btn_main js-addmodal active">
-                                  <div class="tocart__content tocart__after">
-                                    <span>В корзине</span>
-                                  </div>
-                                </button> -->
-                                <!-- <button class="tocart btn btn_main js-addmodal active">
-                                  <div class="tocart__content tocart__before">
-                                    <span>Купить</span>
-                                  </div>
-                                </button> -->
                                 <button class="tocart btn btn_main js-addmodal">
                                   <div class="tocart__content tocart__before">
                                     <span>В корзину</span>
@@ -1035,9 +1040,9 @@
               <ul class="">
                 <li class="active"><span class="sitetabs__title">О товаре</span></li>
                 <li>
-                  <span class="sitetabs__title">Детали</span>
+                  <span class="sitetabs__title">Характеристики</span>
                 </li>
-                <li>
+                <li class="sitetab--reviews">
                   <span class="sitetabs__title">Отзывы</span>
                 </li>
                 <li><span class="sitetabs__title">Доставка и оплата</span></li>
@@ -1063,7 +1068,7 @@
                 </div>
               </div>
               <div class="sitetabs__content">
-                <h2>Детали</h2>
+                <h2>Характеристики</h2>
 
                 <div class="sitetabs__main">
 
@@ -1080,7 +1085,7 @@
                   <!-- /.description -->
                 </div>
               </div>
-              <div class="sitetabs__content">
+              <div class="sitetabs__content" id="detailtabs">
                 <h2>Отзывы</h2>
 
                 <div class="sitetabs__main">
@@ -1264,13 +1269,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1308,13 +1313,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1353,13 +1358,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1397,13 +1402,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1441,13 +1446,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1485,13 +1490,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1529,13 +1534,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1573,13 +1578,13 @@
                             <div class="productcard__buy">
                               <div class="productcard__prices">
                                 <div class="productcard__topprice">
-                                  <div class="productcard__oldprice">102 230 ₽</div>
+                                  <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                   <div class="productcard__badge">12%</div>
                                 </div>
                                 <!-- /.productcard__oldprice -->
                                 <div class="productcard__mainprice">
                                   <div class="productcard__price">
-                                    <div class="productcard__pricevalue">89 230 ₽</div>
+                                    <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                   </div>
                                   <!-- /.productcard__price -->
                                 </div>
@@ -1643,13 +1648,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1687,13 +1692,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1731,13 +1736,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1775,13 +1780,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1819,13 +1824,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1863,13 +1868,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1907,13 +1912,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1951,13 +1956,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -1995,13 +2000,13 @@
                           <div class="productcard__buy">
                             <div class="productcard__prices">
                               <div class="productcard__topprice">
-                                <div class="productcard__oldprice">102 230 ₽</div>
+                                <div class="productcard__oldprice">102 230 <span class="rouble">₽</span></div>
                                 <div class="productcard__badge">12%</div>
                               </div>
                               <!-- /.productcard__oldprice -->
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
-                                  <div class="productcard__pricevalue">89 230 ₽</div>
+                                  <div class="productcard__pricevalue">89 230 <span class="rouble">₽</span></div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -2066,7 +2071,7 @@
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
                                   <div class="productcard__pricevalue">674.94</div>
-                                  <div class="productcard__priceunit">₽/кг</div>
+                                  <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
@@ -2113,7 +2118,7 @@
                               </div>
                             </div>
                             <div class="minicard__amount">
-                              <div class="minicard__pricecount">674.94 ₽/кг.</div>
+                              <div class="minicard__pricecount">674.94 <span class="rouble">₽</span>/кг.</div>
                             </div>
                           </div>
                           <!-- /.minicard__count -->
@@ -2136,7 +2141,7 @@
                           <div class="productcard__mainprice">
                             <div class="productcard__price">
                               <div class="productcard__pricevalue">674.94</div>
-                              <div class="productcard__priceunit">₽/кг</div>
+                              <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                             </div>
                             <!-- /.productcard__price -->
                           </div>
@@ -2211,7 +2216,7 @@
                                       <div class="productcard__mainprice">
                                         <div class="productcard__price">
                                           <div class="productcard__pricevalue">674.94</div>
-                                          <div class="productcard__priceunit">₽/кг</div>
+                                          <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                                         </div>
                                         <!-- /.productcard__price -->
                                       </div>
@@ -2258,7 +2263,7 @@
                                       <div class="productcard__mainprice">
                                         <div class="productcard__price">
                                           <div class="productcard__pricevalue">674.94</div>
-                                          <div class="productcard__priceunit">₽/кг</div>
+                                          <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                                         </div>
                                         <!-- /.productcard__price -->
                                       </div>
@@ -2305,7 +2310,7 @@
                                       <div class="productcard__mainprice">
                                         <div class="productcard__price">
                                           <div class="productcard__pricevalue">674.94</div>
-                                          <div class="productcard__priceunit">₽/кг</div>
+                                          <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                                         </div>
                                         <!-- /.productcard__price -->
                                       </div>
@@ -2352,7 +2357,7 @@
                                       <div class="productcard__mainprice">
                                         <div class="productcard__price">
                                           <div class="productcard__pricevalue">674.94</div>
-                                          <div class="productcard__priceunit">₽/кг</div>
+                                          <div class="productcard__priceunit"><span class="rouble">₽</span>/кг</div>
                                         </div>
                                         <!-- /.productcard__price -->
                                       </div>
