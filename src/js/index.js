@@ -32,9 +32,33 @@ function initFE() {
 
 
 $(document).ready(function() {
+    if ($(window).width() < 1024) {
+        $('[href="#detailtabs"]').on('click', function(e) {
+            e.preventDefault()
+              
+        
+                $('#detailtabs h2').trigger('click');
+                $('html,body').animate({
+                    scrollTop: $("#detailtabs").offset().top - 200},
+                    'slow');
+           
+          }) 
+    } else {
+        $('[href="#detailtabs"]').on('click', function(e) {
+            e.preventDefault()
+              
+        
+                $('.sitetab--reviews').trigger('click');
+                $('html,body').animate({
+                    scrollTop: $("#detailtabs").offset().top - 150},
+                    'slow');
+           
+          }) 
+    }   
+
     $(".youtubepopup").click(function () {
         var $this = $(this);
-        var $iframe = $('<iframe frameborder="0" allow="autoplay; encrypted-media" class="iframe" id="Overlayvideo" allowfullscreen="true">').attr("src", $this.data("link")).css({"width": 400, "height": 300});
+        var $iframe = $('<iframe frameborder="0" allow="autoplay; encrypted-media" class="iframe" id="Overlayvideo" allowfullscreen="true">').attr("src", $this.data("link")).css({"width": 700, "height": 500});
         var $title = '';
         $("#video-view").html($title).append($iframe);
         $("#video-popup").show();
@@ -286,6 +310,8 @@ function menuSliderInit() {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
             arrows: true,
             dots: true,
             fade: true,
@@ -419,7 +445,7 @@ function productSliderInit() {
             infinite: true,
             slidesToShow: 6,
             slidesToScroll: 1,
-         /*    autoplay: true,
+          /*   autoplay: true,
             autoplaySpeed: 3000, */
             nextArrow: $(this).closest('.productslider').find('.slider__arrow_right'),
             prevArrow: $(this).closest('.productslider').find('.slider__arrow_left'),
