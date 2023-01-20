@@ -58,15 +58,37 @@ $(document).ready(function() {
 
     $(".youtubepopup").click(function () {
         var $this = $(this);
-        var $iframe = $('<iframe frameborder="0" allow="autoplay; encrypted-media" class="iframe" id="Overlayvideo" allowfullscreen="true">').attr("src", $this.data("link")).css({"width": 700, "height": 500});
+        var $iframe = $('<iframe frameborder="0" allow="autoplay; encrypted-media" class="iframe" id="Overlayvideo" allowfullscreen="true">').attr("src", $this.data("link")).css({"width": 600, "height": 400});
         var $title = '';
         $("#video-view").html($title).append($iframe);
         $("#video-popup").show();
+
+        const element = "#video-view iframe"
+        const button=".youtubepopup"
+        $(document).click(function(event) {
+            if (!$(event.target).closest(`${element},${button}`).length) {
+                $(button).removeClass('active')
+                $("#video-popup").hide()
+                $("#video-view").html('')
+            }
+        });
+        
+        $(document).keyup(function(e) {
+            if (e.key === "Escape") { // escape key maps to keycode `27`
+                $(button).removeClass('active')
+                $("#video-popup").hide()
+                $("#video-view").html('')
+            }
+        });
     });
     $('#video-close').click(function () {
         $("#video-view").html('')
         $("#video-popup").hide()
     })
+
+
+      
+
 
 
     
@@ -770,6 +792,7 @@ function closeByClickOutside(element, button) {
       }
   });
 }
+
 function closeByOutsideSelect() {
   $(document).click(function(event) {
       if (!$(event.target).closest(`.dropdown-select__list,.dropdown-select__title`).length) {
